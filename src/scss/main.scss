@@ -1,0 +1,21 @@
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+
+@use "blocks/header";
+
+@use "blocks/hero";
+@use "blocks/complex";
+@use "blocks/equipment";
+@use "blocks/events";
+@use "blocks/projects";
+@use "blocks/advantages";
+@use "blocks/request";
+@use "blocks/faq";
+@use "blocks/contacts";
+
+@use "blocks/footer";
+
+@use "blocks/popup";
