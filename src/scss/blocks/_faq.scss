@@ -180,7 +180,7 @@
     padding-bottom: rem(50);
 
     &__title {
-      padding-left: rem(27);
+      // padding-left: rem(27);
     }
 
     &__list {
@@ -191,7 +191,8 @@
   }
 
   .faq-item {
-    width: rem(335);
+    width: 100%;
+    max-width: rem(400);
 
     &__details {
       summary {
@@ -213,6 +214,7 @@
       &::before {
         width: rem(28) !important;
         height: rem(52) !important;
+        translate: 0 90% !important;
       }
     }
 

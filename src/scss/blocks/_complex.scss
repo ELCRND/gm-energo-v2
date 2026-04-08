@@ -4,8 +4,37 @@
   padding-top: rem(235);
   padding-bottom: rem(147);
   background: var(--8);
+  position: relative;
+  perspective: rem(800);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140%;
+    height: 140%;
+    pointer-events: none;
+    z-index: -1;
+    translate: -15% -10%;
+    transform: rotateY(-7deg) rotateZ(2deg);
+
+    background-image:
+      linear-gradient(to right, var(--1) rem(2), transparent rem(2)),
+      linear-gradient(
+        to bottom,
+        var(--1) rem(2),
+        rgba(17, 114, 185, 0.08) rem(2)
+      );
+
+    background-size: rem(90) rem(80);
+    // opacity: 0.3;
+  }
 
   &__container {
+    position: relative;
+    z-index: 2;
   }
 
   &__title {
@@ -33,6 +62,13 @@
   &__step {
     flex: 0 1 rem(710);
     counter-increment: complex-counter;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px) saturate(200%);
+    border-radius: rem(20);
+    box-shadow:
+      0 rem(8) rem(32) 0 rgba(0, 0, 0, 0.37),
+      rem(-20) rem(-20) rem(80) rgba(17, 114, 185, 0.2) inset;
+    overflow: hidden;
 
     &:nth-of-type(1) {
       .complex__step-title {
@@ -66,9 +102,9 @@
     }
 
     &-image {
-      width: 100%;
+      width: 120%;
       position: relative;
-      clip-path: polygon(6% 0%, 100% 0, 100% 75%, 94% 100%, 0 100%, 0 25%);
+      clip-path: polygon(0% 0%, 100% 0, 100% 75%, 94% 100%, 0 100%, 0 25%);
 
       &::before {
         content: "";
@@ -83,20 +119,21 @@
     }
 
     &-content {
+      padding: rem(24) rem(20);
     }
 
     &-title {
-      margin-top: rem(24);
       color: var(--2);
       position: relative;
       z-index: 1;
+      perspective: rem(1000);
 
       &::before,
       &::after {
         content: counter(complex-counter, decimal-leading-zero);
         width: rem(114);
-        height: rem(105);
-        padding-top: rem(20);
+        height: rem(66);
+        padding-top: rem(10);
         padding-left: rem(20);
         font-family: var(--second-family);
         font-weight: 500;
@@ -105,8 +142,8 @@
         color: var(--3);
         position: absolute;
         top: 0;
-        left: rem(-2);
-        translate: 0 -78%;
+        left: rem(-20);
+        translate: 13% -134.6%;
         z-index: -1;
       }
 
@@ -115,6 +152,8 @@
         background-color: var(--1);
         transform: skew(-31deg) scale(0.915, 1);
         z-index: -2;
+        box-shadow: 0 rem(20) rem(20) rgba(155, 155, 155, 0.65);
+        filter: blur(1px);
       }
     }
 
@@ -177,17 +216,15 @@
       //   }
 
       &-title {
-        margin-top: rem(20);
-
         &::before,
         &::after {
-          width: rem(96);
-          height: rem(88);
-          padding-left: rem(20);
+          width: rem(86);
+          height: rem(48);
+          // padding-left: rem(20);
           font-size: rem(30);
           position: absolute;
-          left: rem(2);
-          translate: 0 -80%;
+          // left: rem(2);
+          translate: 13% -190%;
         }
       }
 
@@ -201,16 +238,20 @@
 
 @include mobile {
   .complex {
-    padding-top: rem(112);
-    padding-bottom: rem(72);
+    padding-top: rem(80);
+    padding-bottom: rem(50);
+
+    &::before {
+      background-size: rem(50) rem(45);
+    }
 
     &__title {
-      padding-inline: rem(27);
+      // padding-inline: rem(27);
     }
 
     &__subtitle {
       margin-top: rem(10);
-      padding-left: rem(27);
+      // padding-left: rem(27);
       font-size: rem(16);
     }
 
@@ -221,6 +262,7 @@
 
     &__step {
       flex: 0 1 100%;
+      border-radius: rem(4);
 
       &:nth-of-type(1) {
         .complex__step-title {
@@ -256,22 +298,25 @@
       }
 
       &-image {
-        clip-path: polygon(7% 0%, 100% 0, 100% 75%, 93% 100%, 0 100%, 0 25%);
+        // clip-path: polygon(7% 0%, 100% 0, 100% 75%, 93% 100%, 0 100%, 0 25%);
       }
 
       &-title {
-        margin-top: rem(15);
+        // margin-top: rem(15);
         font-size: rem(15);
 
         &::before,
         &:after {
           width: rem(74);
-          height: rem(70);
+          height: rem(42);
           padding-left: rem(19);
           font-size: rem(22);
-          position: absolute;
-          left: rem(0);
-          translate: 0 -75%;
+
+          translate: 8% -156%;
+        }
+
+        &::after {
+          transform: skew(-24deg) scale(0.915, 1);
         }
       }
     }

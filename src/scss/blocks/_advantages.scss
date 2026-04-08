@@ -97,6 +97,7 @@
     &__title {
       flex: 0 0 fluid(150, 350);
       margin-right: 0;
+      justify-self: start;
     }
   }
 
@@ -145,7 +146,9 @@
     &__title {
       flex: 0 0 auto;
       max-width: rem(298);
-      padding-left: rem(18);
+      margin-left: 0;
+      padding-left: 0;
+      align-self: start;
     }
 
     &__list {

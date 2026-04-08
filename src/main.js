@@ -16,6 +16,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   HeroSlider();
 
+  window.addEventListener("load", () => {
+    document
+      .querySelectorAll(
+        "img[data-loading='lazy'], picture[data-loading='lazy']",
+      )
+      .forEach((el) => {
+        if (el.localName === "img" && el.dataset.src) {
+          el.src = el.dataset.src;
+        }
+
+        if (el.localName === "picture" && el.dataset.src) {
+          picture.querySelectorAll("source[data-src]").forEach((source) => {
+            if (source.dataset.src) {
+              source.srcset = source.dataset.srcset;
+            }
+          });
+        }
+
+        // if (el.dataset.src) {
+        //   el.src = img.dataset.src;
+        // }
+      });
+
+    document.querySelectorAll(".complex__steps picture").forEach((picture) => {
+      picture.querySelectorAll("source[data-src]").forEach((source) => {
+        // source.srcset = source.dataset.srcset;
+        // const img = picture.querySelector("img");
+        // if (img && img.dataset.src) {
+        //   img.src = img.dataset.src;
+        // }
+      });
+    });
+  });
+
   ProjectsSlider();
 
   new RequestForm();

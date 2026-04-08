@@ -109,3 +109,29 @@
     font-size: rem(14);
   }
 }
+
+.u-text--accent {
+  color: var(--1);
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 104%;
+    height: 80%;
+    border-radius: rem(8);
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -45%;
+    z-index: -1;
+  }
+
+  @include tablet {
+    &::before {
+      width: 102%;
+      border-radius: rem(3);
+    }
+  }
+}

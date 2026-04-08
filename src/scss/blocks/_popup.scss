@@ -220,6 +220,7 @@
       position: absolute;
       inset: 0;
       transform: skew(-31deg) scale(0.915, 1);
+
       border-block: 3px solid transparent;
       border-inline: 4px solid transparent;
       background-color: var(--1);
@@ -250,6 +251,7 @@
     transition: all var(--transition-duration);
     position: relative;
     z-index: 1;
+    background-color: transparent;
 
     &:focus {
       outline: none;

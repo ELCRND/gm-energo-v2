@@ -173,17 +173,21 @@
   &__partners {
     @include flex-center;
     width: calc(100% - var(--container-padding-x) * 2);
-    height: rem(183);
-    padding-inline: rem(44);
-    background-color: var(--1);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
     position: absolute;
     bottom: 0;
     z-index: 1;
     translate: 0 47%;
-    clip-path: polygon(2% 0%, 100% 0, 100% 75%, 98% 100%, 0 100%, 0 25%);
+
+    filter: drop-shadow(rem(20) rem(15) rem(30) rgba(39, 77, 104, 0.5));
+
+    &-content {
+      width: 100%;
+      height: rem(183);
+      background-color: var(--1);
+      clip-path: polygon(2% 0%, 100% 0, 100% 75%, 98% 100%, 0 100%, 0 25%);
+      overflow: hidden;
+      opacity: 0.98;
+    }
 
     .swiper-wrapper {
       display: flex;
@@ -317,9 +321,12 @@
 
     &__partners {
       width: calc(100% - var(--container-padding-x--tablet) * 2);
-      height: rem(138);
       translate: 0 67%;
-      clip-path: polygon(3% 0%, 100% 0, 100% 68%, 97% 100%, 0 100%, 0 32%);
+
+      &-content {
+        height: rem(138);
+        clip-path: polygon(3% 0%, 100% 0, 100% 68%, 97% 100%, 0 100%, 0 32%);
+      }
 
       .swiper-wrapper {
         padding-top: rem(30);
@@ -406,7 +413,7 @@
 
     &__cards {
       width: fluid(335, 485);
-      padding: rem(31) 0 rem(46) rem(127);
+      padding: rem(24) 0 rem(24) rem(127);
       gap: rem(20);
       background-color: var(--4);
       clip-path: polygon(10% 0%, 100% 0, 100% 75%, 90% 100%, 0 100%, 0 25%);
@@ -449,15 +456,17 @@
 
     &__partners {
       width: rem(336);
-      height: rem(107);
       translate: 0 42%;
-      clip-path: polygon(8% 0%, 100% 0, 100% 58%, 92% 100%, 0 100%, 0 42%);
-      padding-inline: rem(24);
+
+      &-content {
+        height: rem(107);
+        clip-path: polygon(8% 0%, 100% 0, 100% 58%, 92% 100%, 0 100%, 0 42%);
+      }
 
       .swiper-wrapper {
         .swiper-slide {
-          width: fluid(84, 300) !important;
-          height: rem(38) !important;
+          width: fluid(140, 300) !important;
+          height: rem(48) !important;
           display: flex;
           justify-content: center;
           margin-right: rem(0) !important;

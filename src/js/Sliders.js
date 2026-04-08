@@ -4,22 +4,18 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export function HeroSlider() {
-  const partnersSlider = new Swiper(".hero__partners", {
+  const partnersSlider = new Swiper(".hero__partners-content", {
     init: false,
-    modules: [Autoplay, Pagination],
+    modules: [Autoplay],
     loop: true,
     slidesPerView: "auto",
     speed: 4000, // скорость прокрутки
     // grabCursor: true,
+    allowTouchMove: false,
 
     autoplay: {
       delay: 0, // пауза
       disableOnInteraction: false, // останока после ручного свайпа
-    },
-
-    pagination: {
-      el: ".hero__partners-pagination",
-      clickable: true,
     },
   });
 
