@@ -17,7 +17,7 @@ export default defineConfig({
   // Сборка
   build: {
     // Выходная директория
-    outDir: "dist",
+    outDir: "docs",
     cssCodeSplit: false,
 
     // Оптимизация chunk'ов
