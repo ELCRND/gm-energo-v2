@@ -40,10 +40,11 @@ export function ProjectsSlider() {
   const projectsSlider = new Swiper(".projects__slider", {
     modules: [Navigation],
     slidesPerView: "auto",
-    speed: 2000, // скорость прокрутки
+    speed: 800, // скорость прокрутки
 
     breakpoints: {
       1280: {
+        speed: 2000,
         allowTouchMove: false, // влючить перетаскивание
       },
     },

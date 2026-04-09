@@ -79,7 +79,7 @@
       line-height: 130%;
       color: var(--2);
       transition: background-color var(--transition-duration) ease-out;
-      clip-path: polygon(2.8% 0, 100% 0, 100% 100%, 0 100%, 0 80%);
+      clip-path: polygon(rem(40) 0, 100% 0, 100% 100%, 0 100%, 0 rem(68));
 
       span {
         width: rem(20);
@@ -157,7 +157,7 @@
       summary {
         padding: rem(32) rem(35) rem(22) rem(30);
         font-size: rem(18);
-        clip-path: polygon(4.5% 0, 100% 0, 100% 100%, 0 100%, 0 85%);
+        // clip-path: polygon(rem(40) 0, 100% 0, 100% 100%, 0 100%, 0 rem(68));
       }
     }
 
@@ -186,7 +186,7 @@
     &__list {
       margin-top: rem(20);
       align-items: center;
-      gap: rem(3);
+      gap: rem(4);
     }
   }
 
@@ -199,7 +199,8 @@
         height: rem(114);
         padding: rem(30) rem(44) rem(0) rem(30);
         font-size: rem(18);
-        clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 48%);
+        // clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 48%);
+        clip-path: polygon(rem(26) 0, 100% 0, 100% 100%, 0 100%, 0 rem(53));
         font-size: rem(14);
         align-items: start;
 

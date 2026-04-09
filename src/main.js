@@ -1,4 +1,3 @@
-import "./scss/main.scss";
 import { BgVideo } from "./js/BgVideo";
 import { Header } from "./js/Header";
 import { Animation } from "./js/Animation";
@@ -17,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   HeroSlider();
 
   window.addEventListener("load", () => {
+    import("./scss/main.scss");
+
     document
       .querySelectorAll(
         "img[data-loading='lazy'], picture[data-loading='lazy']",

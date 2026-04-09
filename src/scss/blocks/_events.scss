@@ -34,7 +34,7 @@
   overflow: hidden;
   position: relative;
   counter-increment: events-counter;
-  clip-path: polygon(9% 0%, 100% 0, 100% 69%, 91% 100%, 0 100%, 0 30%);
+
   pointer-events: all;
 
   &:hover {
